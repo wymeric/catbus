@@ -1,0 +1,4 @@
+<agm-map [latitude]="1.605450" [longitude]="110.377857" [zoom]="12">
+    <agm-marker *ngFor="let refPoint of refPoints"
+        [latitude]="refPoint.lat" [longitude]="refPoint.long"></agm-marker>
+</agm-map>

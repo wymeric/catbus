@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+Routes
+</mat-toolbar>
+<div class="routes">
+    <div *ngFor="let br of busRoutes">
+        <tr><th width="33%"></th><th width="33%"><th width="33%"></th></tr>
+        <tr>
+            <td>{{br.routeOut.name}}</td>
+            <td><button mat-button (click)="sendRefPoints(br,true)">outbound</button></td>
+            <td><button mat-button (click)="sendRefPoints(br,false)">inbound</button></td>
+        </tr>
+    </div>
+</div>
