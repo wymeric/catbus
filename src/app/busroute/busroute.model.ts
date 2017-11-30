@@ -9,10 +9,12 @@ export class BusRouteModel {
 
 export class BusRefPoint {
     name: string;
+    ref: string;
     lat: number;
     long: number;
 
-    constructor (name: string, lat: number, long: number) {
-        this.name = name; this.lat = lat, this.long = long;
+    constructor (ref: any) {
+        this.name = ref.name; this.ref = ref.ref;
+        this.lat = Number(ref.lat); this.long = Number(ref.long);
     }
 }

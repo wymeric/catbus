@@ -1,4 +1,11 @@
-<agm-map [latitude]="1.605450" [longitude]="110.377857" [zoom]="12">
-    <agm-marker *ngFor="let refPoint of refPoints"
-        [latitude]="refPoint.lat" [longitude]="refPoint.long"></agm-marker>
+<agm-map [latitude]="1.605450" [longitude]="110.377857" [zoom]="12" [mapTypeControl]="true"
+    [mapTypeControlOptions]="mapTypeControlOpt">
+    <ng-container *ngFor="let refPoint of refPoints; let i = index">
+        <agm-marker
+            [latitude]="refPoint.lat" [longitude]="refPoint.long" [label]="refPoint.ref"></agm-marker>
+        <!--<agm-directions *ngIf="refPoints[i+1]" 
+            [originLat]="refPoint.lat" [originLong]="refPoint.long"
+            [destLat]="refPoints[i+1].lat" [destLong]="refPoints[i+1].long"></agm-directions>    
+        -->
+    </ng-container>
 </agm-map>

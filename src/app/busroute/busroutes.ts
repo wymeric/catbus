@@ -1,10 +1,13 @@
 import { BusRouteModel, BusRefPoint } from './busroute.model';
 
 export class BusRoutes {
-    routeOut: BusRouteModel;
-    routeIn: BusRouteModel;
+    name: string;
+    refsOut: string;
+    refsIn: string;
 
-    constructor() {
-
+    constructor(route: any) {
+        this.name = route.name;
+        this.refsOut = route.refsOut;
+        this.refsIn = route.refsIn;
     }
 }

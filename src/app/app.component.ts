@@ -8,5 +8,5 @@ import { BusRefPoint } from './busroute/busroute.model';
 })
 export class AppComponent {
   title = 'app';
-  refPoints: BusRefPoint[];
+  refs: string;
 }

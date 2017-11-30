@@ -7,5 +7,15 @@
 .routes {
     background: rgba(0,0,0, 0.5);
     color: white;
-    padding: 3px;
+    padding: 5px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.routes::-webkit-scrollbar {
+    background: rgba(0,0,0, 0.0);
+}
+
+.routes::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0, 0.3);
 }
