@@ -38,7 +38,7 @@ export class RoutePanelComponent implements OnInit, OnDestroy {
 
     private populate() {
         let busRoutes = new BusRoutes({});
-        this.dataSubscription = this.ds.getData(`http://swopt.gaharu.co:8080/catbus/routes.php`)
+        this.dataSubscription = this.ds.getData(`https://angularswopt.appspot.com/catbus/routes.php`)
         .subscribe(response => {
             let routes: any = response;
             for (let route of routes) {

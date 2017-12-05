@@ -23,7 +23,7 @@ export class RouteMapComponent implements OnInit {
         this.refPoints = new Array<BusRefPoint>();
         console.log(refs);
         let headers = new Headers();
-        this.http.get(`http://swopt.gaharu.co:8080/catbus/getrefs.php?refs=` + refs, {headers: headers}).toPromise()
+        this.http.get(`https://angularswopt.appspot.com/catbus/getrefs.php?refs=` + refs, {headers: headers}).toPromise()
         .then (response => {
             for (let ref of response.json().results) {
                 this.refPoints.push(new BusRefPoint(ref));
